@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pizza Dome</title>
+        <link rel="stylesheet" type="text/css" href="styling.css">
+        <script type="text/javascript" src="code.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to Pizza Dome</h1>
+        <form>
+            <h3 class="setstyle">Please fill the form to order</h3>
+            <div id="seetothis"><!--Contains personal information-->
+                <table border="0">
+                    <tr>
+                        <td class="about">First Name : </td>
+                        <td class="inputfield"><input name="Firstname" id="firstname" type="text" onblur="checkFirstname();" required></td>
+                        <td class="remarks"><span id="message1">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="about">Last Name : </td>
+                        <td class="inputfield"><input name="Lastname" id="lastname" type="text" onblur="checkLastname();" required></td>
+                        <td class="remarks"><span id="message2">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="about">Email address : </td>
+                        <td class="inputfield"><input name="Email" id="email" type="email" required></td>
+                        <td class="remarks" style="color: black;">abc@xyz.com</td>
+                    </tr>
+                    <tr>
+                        <td class="about">Address : </td>
+                        <td class="inputfield"><input name="Address" id="address" type="text" onfocus="disaddress();" required></td>
+                        <td class="remarks"><span id="message3">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="about">Phone Number : </td>
+                        <td class="inputfield"><input name="Pnumber" id="pnumber" type="number" onblur="checkphone();" required></td>
+                        <td class="remarks" ><span id="phonepromt" style="color: black;">xxxxxxxxxx</span></td>
+                    </tr>
+                </table>
+            </div>    
+        </form>
+        <div id="formenu">
+            <p style="padding-top: 10px; padding-bottom: 5px;">For viewing menu and price head over here -><a href="pizzamenu.jpg">click</a></p>
+        </div>
+        <div id="alsoseetothis"><!--Contains items to order--> 
+            <table border="1">
+                <tr>
+                    <td class="type" style="color: green;">Simply Veg</td>
+                    <td class="name">Margherita</td>
+                    <td class="eremarks">(Single cheese topping)</td>
+                    <td class="size"><input name="ASize" id="asize" type="radio" value="Reg">Regular</td>
+                    <td class="size"><input name="ASize" id="asize" type="radio" value="Med">Medium</td>
+                    <td class="size"><input name="ASize" id="asize" type="radio" value="Lar">Large</td>
+                    <td class="qty"><input name="AQty" id="aqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: green;">Simply Veg</td>
+                    <td class="name">Cheese and tomato pizza</td>
+                    <td class="eremarks"></td>
+                    <td class="size"><input name="BSize" id="bsize" type="radio">Regular</td>
+                    <td class="size"><input name="BSize" id="bsize" type="radio">Medium</td>
+                    <td class="size"><input name="BSize" id="bsize" type="radio">Large</td>
+                    <td class="qty"><input name="BQty" id="bqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: green;">Veg Treat</td>
+                    <td class="name">Veg Hawaiian Delight</td>
+                    <td class="eremarks">(Golden corn, Pineapple)</td>
+                    <td class="size"><input name="CSize" id="csize" type="radio">Regular</td>
+                    <td class="size"><input name="CSize" id="csize" type="radio">Medium</td>
+                    <td class="size"><input name="CSize" id="csize" type="radio">Large</td>
+                    <td class="qty"><input name="CQty" id="cqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: green;">Veg Treat</td>
+                    <td class="name">Spicy Triple Tango</td>
+                    <td class="eremarks">(Golden corn,red paprika)</td>
+                    <td class="size"><input name="DSize" id="dsize" type="radio">Regular</td>
+                    <td class="size"><input name="DSize" id="dsize" type="radio">Medium</td>
+                    <td class="size"><input name="DSize" id="dsize" type="radio">Large</td>
+                    <td class="qty"><input name="DQty" id="dqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: green;">Veg Treat</td>
+                    <td class="name">Double Cheese Margherita</td>
+                    <td class="eremarks">(Loaded with extra cheese)</td>
+                    <td class="size"><input name="ESize" id="esize" type="radio">Regular</td>
+                    <td class="size"><input name="ESize" id="esize" type="radio">Medium</td>
+                    <td class="size"><input name="ESize" id="esize" type="radio">Large</td>
+                    <td class="qty"><input name="EQty" id="eqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: green;">Veg Treat</td>
+                    <td class="name">Country Special</td>
+                    <td class="eremarks">(Onion, Crisp Capsicum,&Fresh tomato)</td>
+                    <td class="size"><input name="FSize" id="fsize" type="radio">Regular</td>
+                    <td class="size"><input name="FSize" id="fsize" type="radio">Medium</td>
+                    <td class="size"><input name="FSize" id="fsize" type="radio">Large</td>
+                    <td class="qty"><input name="FQty" id="fqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: green;">Veg Treat</td>
+                    <td class="name">Farm house</td>
+                    <td class="eremarks">(Onion, Crisp Capsicum,Mushroom,& Fresh tomato)</td>
+                    <td class="size"><input name="GSize" id="gsize" type="radio">Regular</td>
+                    <td class="size"><input name="GSize" id="gsize" type="radio">Medium</td>
+                    <td class="size"><input name="GSize" id="gsize" type="radio">Large</td>
+                    <td class="qty"><input name="GQty" id="gqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: red;">Simply Non Veg</td>
+                    <td class="name">Chicken Salam Special</td>
+                    <td class="eremarks">(Exotic chicken salami)</td>
+                    <td class="size"><input name="HSize" id="hsize" type="radio">Regular</td>
+                    <td class="size"><input name="HSize" id="hsize" type="radio">Medium</td>
+                    <td class="size"><input name="HSize" id="hsize" type="radio">Large</td>
+                    <td class="qty"><input name="HQty" id="hqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: red;">Simply Non Veg</td>
+                    <td class="name">Cheese and Barbeque chicken</td>
+                    <td class="eremarks"></td>
+                    <td class="size"><input name="ISize" id="isize" type="radio">Regular</td>
+                    <td class="size"><input name="ISize" id="isize" type="radio">Medium</td>
+                    <td class="size"><input name="ISize" id="isize" type="radio">Large</td>
+                    <td class="qty"><input name="IQty" id="iqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: red;">Non Veg Treat</td>
+                    <td class="name">Chicken Hawaiian Twist</td>
+                    <td class="eremarks">(Exotic chicken salami, Pineapple)</td>
+                    <td class="size"><input name="JSize" id="jsize" type="radio">Regular</td>
+                    <td class="size"><input name="JSize" id="jsize" type="radio">Medium</td>
+                    <td class="size"><input name="JSize" id="jsize" type="radio">Large</td>
+                    <td class="qty"><input name="JQty" id="jqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: red;">Non Veg Treat</td>
+                    <td class="name">Chicken Fiesta</td>
+                    <td class="eremarks">(Chunky Chicken,Spicy Chicken,Onion,Capsicum)</td>
+                    <td class="size"><input name="KSize" id="ksize" type="radio">Regular</td>
+                    <td class="size"><input name="KSize" id="ksize" type="radio">Medium</td>
+                    <td class="size"><input name="KSize" id="ksize" type="radio">Large</td>
+                    <td class="qty"><input name="KQty" id="kqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: red;">Non Veg Treat</td>
+                    <td class="name">Spicy Chicken</td>
+                    <td class="eremarks">(Red paprika,Hot'n'Spicy chicken)</td>
+                    <td class="size"><input name="LSize" id="lsize" type="radio">Regular</td>
+                    <td class="size"><input name="LSize" id="lsize" type="radio">Medium</td>
+                    <td class="size"><input name="LSize" id="lsize" type="radio">Large</td>
+                    <td class="qty"><input name="LQty" id="lqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+                <tr>
+                    <td class="type" style="color: red;">Non Veg Treat</td>
+                    <td class="name">Barbeque Chicken</td>
+                    <td class="eremarks">(Onion,Barbeque Chicken)</td>
+                    <td class="size"><input name="MSize" id="msize" type="radio">Regular</td>
+                    <td class="size"><input name="MSize" id="msize" type="radio">Medium</td>
+                    <td class="size"><input name="MSize" id="msize" type="radio">Large</td>
+                    <td class="qty"><input name="MQty" id="mqty" type="number" min="0" max="7" value="0">Qty</td>
+                </tr>
+            </table>
+        </div>
+        <button onclick="ordernow();" id="yeahforthis">Order Now</button>
+        <p id="alsoforthis"></p>
+    </body>
+</html>
